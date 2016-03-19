@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="well">
+        현재 등록된 문제: {{$ctrl.questionCount}}개
+      </div>
+      <form class="form" ng-submit="$ctrl.save($event)">
+        <div class="panel panel-info">
+          <div class="panel-heading">문제 만들기</div>
+
+          <div class="panel-body">
+            <div class="form-group">
+              <label for="questionText">문제</label>
+              <input type="text" class="form-control" ng-model="$ctrl.form.questionText">
+            </div>
+            <div class="form-group">
+              <label for="currect-answer">정답</label>
+              <input type="text" class="form-control" ng-model="$ctrl.form.currectAnswer">
+            </div>
+          </div>
+          <div class="panel-footer text-right">
+            <button type="submit" class="btn btn-primary">추가</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
